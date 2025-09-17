@@ -80,13 +80,13 @@ export default function Page() {
       <main className="relative bg-black min-h-screen">
         {/* Video 1 (Desktop) */}
         <VideoSectionDesktop
-          src={`${process.env.NEXT_PUBLIC_URL_CDN}/two-desktop.mp4`}
+          src={`/two-desktop.mp4`}
           label="Video 1 Desktop"
           id="d1"
         />
 
         {/* Botón CTA (desktop) */}
-        <div className="absolute top-[25%] left-1/5 flex justify-center items-center w-full z-20 cursor-pointer">
+        <div className="absolute top-[25%] left-1/5 flex justify-center items-center z-20 cursor-pointer">
           {showButton && (
             <div className="flex gap-4 justify-between items-center w-full px-24">
               <button
@@ -94,7 +94,7 @@ export default function Page() {
                 className="bg-transparent text-black py-2 rounded-md cursor-pointer group"
               >
                 <img
-                  src={`${process.env.NEXT_PUBLIC_URL_CDN}/button-2.png`}
+                  src={`/button-2.png`}
                   alt="Botón principal"
                   width={660}
                   height={160}
@@ -112,7 +112,7 @@ export default function Page() {
 
         {/* Más videos desktop */}
         <VideoSectionDesktop
-          src={`${process.env.NEXT_PUBLIC_URL_CDN}/landing-desktop-2.mp4`}
+          src={`/landing-desktop-2.mp4`}
           label="Video 2 Desktop"
           id="d2"
         />
@@ -121,7 +121,7 @@ export default function Page() {
         <LeadFormModal
           open={openForm}
           onOpenChange={setOpenForm}
-          baseUrl="https://mooneymaker.co/home?ref=64349"
+          baseUrl={process.env.NEXT_PUBLIC_BASE_URL}
         />
       </main>
     );
@@ -132,7 +132,7 @@ export default function Page() {
     <main className="relative bg-black min-h-screen">
       {/* Video 1 */}
       <VideoSection
-        src={`${process.env.NEXT_PUBLIC_URL_CDN}/landing-mobile-1.mp4`}
+        src={`/landing-mobile-1.mp4`}
         label="Video 1: Relámpagos y templo"
         id="1"
       />
@@ -145,7 +145,7 @@ export default function Page() {
             className="bg-transparent text-black py-2 rounded-md"
           >
             <img
-              src={`${process.env.NEXT_PUBLIC_URL_CDN}/button-1.png`}
+              src={`/button-1.png`}
               alt="Logo principal"
               width={300}
               height={100}
@@ -157,7 +157,7 @@ export default function Page() {
 
       {/* Video 2 */}
       <VideoSection
-        src={`${process.env.NEXT_PUBLIC_URL_CDN}/landing-mobile-2.mp4`}
+        src={`/landing-mobile-2.mp4`}
         label="Video 2: Relámpagos y templo"
         id="2"
       />
@@ -170,7 +170,7 @@ export default function Page() {
             className="bg-transparent text-black py-2 rounded-md"
           >
             <img
-              src={`${process.env.NEXT_PUBLIC_URL_CDN}/button-2.png`}
+              src={`/button-2.png`}
               alt="Logo principal"
               width={300}
               height={100}
@@ -184,7 +184,7 @@ export default function Page() {
       <LeadFormModal
         open={openForm}
         onOpenChange={setOpenForm}
-        baseUrl="https://mooneymaker.co/home?ref=64349"
+        baseUrl={process.env.NEXT_PUBLIC_BASE_URL}
       />
 
       {/* Estilo para giro lento (solo si usas animate-spin-slow) */}
